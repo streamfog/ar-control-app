@@ -19,7 +19,7 @@ function App() {
     try {
       const response = await fetch(`${API_BASE_URL}/inventory/${remoteKey}`, {
         headers: {
-          'Authorization': `Bearer ${clientId}`,
+          'client-id': `${clientId}`,
         },
       });
 
@@ -41,7 +41,7 @@ function App() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${clientId}`,
+          'client-id': `${clientId}`,
         },
         body: JSON.stringify({ remoteKey, lensId }),
       });
@@ -59,7 +59,7 @@ function App() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${clientId}`,
+          'client-id': `${clientId}`,
         },
         body: JSON.stringify({ remoteKey }),
       });
@@ -77,7 +77,7 @@ function App() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${clientId}`,
+          'client-id': `${clientId}`,
         },
         body: JSON.stringify({ remoteKey, animId }),
       });
